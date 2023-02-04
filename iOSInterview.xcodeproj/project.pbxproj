@@ -20,6 +20,8 @@
 		15215620298E34C0002972C1 /* GetJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521561F298E34C0002972C1 /* GetJson.swift */; };
 		15215622298E3560002972C1 /* Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15215621298E3560002972C1 /* Url.swift */; };
 		15215625298E3D3F002972C1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15215624298E3D3F002972C1 /* UIColor.swift */; };
+		15912523298E4A9B009C33E6 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15912522298E4A9B009C33E6 /* CustomTabBarController.swift */; };
+		15912525298E5B28009C33E6 /* GetDataNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15912524298E5B28009C33E6 /* GetDataNotification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		1521561F298E34C0002972C1 /* GetJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetJson.swift; sourceTree = "<group>"; };
 		15215621298E3560002972C1 /* Url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Url.swift; sourceTree = "<group>"; };
 		15215624298E3D3F002972C1 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		15912522298E4A9B009C33E6 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		15912524298E5B28009C33E6 /* GetDataNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataNotification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,7 @@
 				15215623298E3D0A002972C1 /* common */,
 				1521561E298E347E002972C1 /* network */,
 				1521561D298E3476002972C1 /* model */,
+				15912521298E4A15009C33E6 /* view */,
 				152155EA298E3321002972C1 /* AppDelegate.swift */,
 				152155EC298E3321002972C1 /* SceneDelegate.swift */,
 				152155EE298E3321002972C1 /* ViewController.swift */,
@@ -151,6 +156,7 @@
 			children = (
 				15215621298E3560002972C1 /* Url.swift */,
 				1521561F298E34C0002972C1 /* GetJson.swift */,
+				15912524298E5B28009C33E6 /* GetDataNotification.swift */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -161,6 +167,14 @@
 				15215624298E3D3F002972C1 /* UIColor.swift */,
 			);
 			path = common;
+			sourceTree = "<group>";
+		};
+		15912521298E4A15009C33E6 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				15912522298E4A9B009C33E6 /* CustomTabBarController.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,8 +310,10 @@
 			files = (
 				152155EF298E3321002972C1 /* ViewController.swift in Sources */,
 				15215625298E3D3F002972C1 /* UIColor.swift in Sources */,
+				15912523298E4A9B009C33E6 /* CustomTabBarController.swift in Sources */,
 				15215622298E3560002972C1 /* Url.swift in Sources */,
 				152155F5298E3321002972C1 /* iOSInterview.xcdatamodeld in Sources */,
+				15912525298E5B28009C33E6 /* GetDataNotification.swift in Sources */,
 				152155EB298E3321002972C1 /* AppDelegate.swift in Sources */,
 				152155ED298E3321002972C1 /* SceneDelegate.swift in Sources */,
 				15215620298E34C0002972C1 /* GetJson.swift in Sources */,
@@ -483,8 +499,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -492,6 +508,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.charder.iOSInterview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -511,8 +530,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -520,6 +539,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.charder.iOSInterview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
