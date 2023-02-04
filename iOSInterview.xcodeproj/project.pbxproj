@@ -17,6 +17,9 @@
 		15215605298E3322002972C1 /* iOSInterviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15215604298E3322002972C1 /* iOSInterviewTests.swift */; };
 		1521560F298E3322002972C1 /* iOSInterviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521560E298E3322002972C1 /* iOSInterviewUITests.swift */; };
 		15215611298E3322002972C1 /* iOSInterviewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15215610298E3322002972C1 /* iOSInterviewUITestsLaunchTests.swift */; };
+		15215620298E34C0002972C1 /* GetJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521561F298E34C0002972C1 /* GetJson.swift */; };
+		15215622298E3560002972C1 /* Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15215621298E3560002972C1 /* Url.swift */; };
+		15215625298E3D3F002972C1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15215624298E3D3F002972C1 /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		1521560A298E3322002972C1 /* iOSInterviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSInterviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1521560E298E3322002972C1 /* iOSInterviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSInterviewUITests.swift; sourceTree = "<group>"; };
 		15215610298E3322002972C1 /* iOSInterviewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSInterviewUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1521561F298E34C0002972C1 /* GetJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetJson.swift; sourceTree = "<group>"; };
+		15215621298E3560002972C1 /* Url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Url.swift; sourceTree = "<group>"; };
+		15215624298E3D3F002972C1 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,9 @@
 		152155E9298E3321002972C1 /* iOSInterview */ = {
 			isa = PBXGroup;
 			children = (
+				15215623298E3D0A002972C1 /* common */,
+				1521561E298E347E002972C1 /* network */,
+				1521561D298E3476002972C1 /* model */,
 				152155EA298E3321002972C1 /* AppDelegate.swift */,
 				152155EC298E3321002972C1 /* SceneDelegate.swift */,
 				152155EE298E3321002972C1 /* ViewController.swift */,
@@ -128,6 +137,30 @@
 				15215610298E3322002972C1 /* iOSInterviewUITestsLaunchTests.swift */,
 			);
 			path = iOSInterviewUITests;
+			sourceTree = "<group>";
+		};
+		1521561D298E3476002972C1 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		1521561E298E347E002972C1 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				15215621298E3560002972C1 /* Url.swift */,
+				1521561F298E34C0002972C1 /* GetJson.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		15215623298E3D0A002972C1 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				15215624298E3D3F002972C1 /* UIColor.swift */,
+			);
+			path = common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +295,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				152155EF298E3321002972C1 /* ViewController.swift in Sources */,
+				15215625298E3D3F002972C1 /* UIColor.swift in Sources */,
+				15215622298E3560002972C1 /* Url.swift in Sources */,
 				152155F5298E3321002972C1 /* iOSInterview.xcdatamodeld in Sources */,
 				152155EB298E3321002972C1 /* AppDelegate.swift in Sources */,
 				152155ED298E3321002972C1 /* SceneDelegate.swift in Sources */,
+				15215620298E34C0002972C1 /* GetJson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
