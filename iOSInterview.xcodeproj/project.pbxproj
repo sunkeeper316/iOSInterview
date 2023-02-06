@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		151FC4AB29908D2100607D98 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151FC4AA29908D2100607D98 /* MainTableViewController.swift */; };
+		151FC4AD29908D2D00607D98 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151FC4AC29908D2D00607D98 /* CustomTextField.swift */; };
+		151FC4AF29908D6900607D98 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151FC4AE29908D6900607D98 /* CustomLabel.swift */; };
+		151FC4B12990AA1E00607D98 /* GetDataAmount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151FC4B02990AA1E00607D98 /* GetDataAmount.swift */; };
 		152155EB298E3321002972C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152155EA298E3321002972C1 /* AppDelegate.swift */; };
 		152155ED298E3321002972C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152155EC298E3321002972C1 /* SceneDelegate.swift */; };
 		152155EF298E3321002972C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152155EE298E3321002972C1 /* ViewController.swift */; };
@@ -42,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		151FC4AA29908D2100607D98 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		151FC4AC29908D2D00607D98 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		151FC4AE29908D6900607D98 /* CustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		151FC4B02990AA1E00607D98 /* GetDataAmount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataAmount.swift; sourceTree = "<group>"; };
 		152155E7298E3321002972C1 /* iOSInterview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSInterview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		152155EA298E3321002972C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		152155EC298E3321002972C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +126,7 @@
 				152155EA298E3321002972C1 /* AppDelegate.swift */,
 				152155EC298E3321002972C1 /* SceneDelegate.swift */,
 				152155EE298E3321002972C1 /* ViewController.swift */,
+				151FC4AA29908D2100607D98 /* MainTableViewController.swift */,
 				152155F0298E3321002972C1 /* Main.storyboard */,
 				152155F6298E3322002972C1 /* Assets.xcassets */,
 				152155F8298E3322002972C1 /* LaunchScreen.storyboard */,
@@ -157,6 +166,7 @@
 				15215621298E3560002972C1 /* Url.swift */,
 				1521561F298E34C0002972C1 /* GetJson.swift */,
 				15912524298E5B28009C33E6 /* GetDataNotification.swift */,
+				151FC4B02990AA1E00607D98 /* GetDataAmount.swift */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -164,6 +174,8 @@
 		15215623298E3D0A002972C1 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				151FC4AC29908D2D00607D98 /* CustomTextField.swift */,
+				151FC4AE29908D6900607D98 /* CustomLabel.swift */,
 				15215624298E3D3F002972C1 /* UIColor.swift */,
 			);
 			path = common;
@@ -309,13 +321,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				152155EF298E3321002972C1 /* ViewController.swift in Sources */,
+				151FC4AD29908D2D00607D98 /* CustomTextField.swift in Sources */,
 				15215625298E3D3F002972C1 /* UIColor.swift in Sources */,
 				15912523298E4A9B009C33E6 /* CustomTabBarController.swift in Sources */,
 				15215622298E3560002972C1 /* Url.swift in Sources */,
 				152155F5298E3321002972C1 /* iOSInterview.xcdatamodeld in Sources */,
 				15912525298E5B28009C33E6 /* GetDataNotification.swift in Sources */,
+				151FC4AF29908D6900607D98 /* CustomLabel.swift in Sources */,
 				152155EB298E3321002972C1 /* AppDelegate.swift in Sources */,
 				152155ED298E3321002972C1 /* SceneDelegate.swift in Sources */,
+				151FC4B12990AA1E00607D98 /* GetDataAmount.swift in Sources */,
+				151FC4AB29908D2100607D98 /* MainTableViewController.swift in Sources */,
 				15215620298E34C0002972C1 /* GetJson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

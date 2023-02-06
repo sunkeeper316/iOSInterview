@@ -1,9 +1,4 @@
-//
-//  ViewController.swift
-//  iOSInterview
-//
-//  Created by Sun Huang on 2023/2/4.
-//
+
 
 import UIKit
 
