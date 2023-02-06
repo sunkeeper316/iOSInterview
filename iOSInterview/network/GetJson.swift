@@ -2,6 +2,43 @@
 
 import Foundation
 
+func getNotificationMessageTask(_ urlstr: String, completionHandler: @escaping ([NotificationMessage]?, Error?) -> Void) {
+    let url = URL(string: urlstr)!
+    let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+      if let error = error {
+        print("Error: \(error)")
+          completionHandler(nil , error)
+        return
+      }
+      
+        if let data = data {
+            print("data")
+            do {
+              let decoder = JSONDecoder()
+                if let result = try? decoder.decode(GetDataNotification.self, from: data) {
+                    if let messages = result.result?.messages {
+                        completionHandler(messages , nil)
+                    }else{
+                        completionHandler(nil , nil)
+                    }
+                }else{
+                    completionHandler(nil , nil)
+                }
+              
+            } catch let error as NSError {
+              print("Error: \(error)")
+                completionHandler(nil , error)
+            }
+        }else{
+            print("No data received")
+            completionHandler(nil , nil)
+            return
+        }
+      
+      
+    }
+    task.resume()
+}
 
 func getData(){
     let url = URL(string: "https://willywu0201.github.io/data/emptyNotificationList.json")!

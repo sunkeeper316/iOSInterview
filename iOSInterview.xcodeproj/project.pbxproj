@@ -10,10 +10,15 @@
 		151FC4AB29908D2100607D98 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151FC4AA29908D2100607D98 /* MainTableViewController.swift */; };
 		151FC4AD29908D2D00607D98 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151FC4AC29908D2D00607D98 /* CustomTextField.swift */; };
 		151FC4AF29908D6900607D98 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151FC4AE29908D6900607D98 /* CustomLabel.swift */; };
-		151FC4B12990AA1E00607D98 /* GetDataAmount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151FC4B02990AA1E00607D98 /* GetDataAmount.swift */; };
+		151FC4B12990AA1E00607D98 /* GetDataAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151FC4B02990AA1E00607D98 /* GetDataAccount.swift */; };
+		151FC4B32990AD8200607D98 /* GetDataFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151FC4B22990AD8200607D98 /* GetDataFavorite.swift */; };
+		151FC4B52990AE3800607D98 /* GetDataADBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151FC4B42990AE3800607D98 /* GetDataADBanner.swift */; };
+		151FC4B82990AF1B00607D98 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151FC4B62990AF1B00607D98 /* NotificationTableViewCell.swift */; };
+		151FC4B92990AF1B00607D98 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 151FC4B72990AF1B00607D98 /* NotificationTableViewCell.xib */; };
+		151FC4BB2990F96C00607D98 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151FC4BA2990F96C00607D98 /* CustomView.swift */; };
 		152155EB298E3321002972C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152155EA298E3321002972C1 /* AppDelegate.swift */; };
 		152155ED298E3321002972C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152155EC298E3321002972C1 /* SceneDelegate.swift */; };
-		152155EF298E3321002972C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152155EE298E3321002972C1 /* ViewController.swift */; };
+		152155EF298E3321002972C1 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152155EE298E3321002972C1 /* NotificationViewController.swift */; };
 		152155F2298E3321002972C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 152155F0298E3321002972C1 /* Main.storyboard */; };
 		152155F5298E3321002972C1 /* iOSInterview.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 152155F3298E3321002972C1 /* iOSInterview.xcdatamodeld */; };
 		152155F7298E3322002972C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 152155F6298E3322002972C1 /* Assets.xcassets */; };
@@ -49,11 +54,16 @@
 		151FC4AA29908D2100607D98 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		151FC4AC29908D2D00607D98 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		151FC4AE29908D6900607D98 /* CustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
-		151FC4B02990AA1E00607D98 /* GetDataAmount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataAmount.swift; sourceTree = "<group>"; };
+		151FC4B02990AA1E00607D98 /* GetDataAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataAccount.swift; sourceTree = "<group>"; };
+		151FC4B22990AD8200607D98 /* GetDataFavorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataFavorite.swift; sourceTree = "<group>"; };
+		151FC4B42990AE3800607D98 /* GetDataADBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataADBanner.swift; sourceTree = "<group>"; };
+		151FC4B62990AF1B00607D98 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		151FC4B72990AF1B00607D98 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
+		151FC4BA2990F96C00607D98 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		152155E7298E3321002972C1 /* iOSInterview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSInterview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		152155EA298E3321002972C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		152155EC298E3321002972C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		152155EE298E3321002972C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		152155EE298E3321002972C1 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		152155F1298E3321002972C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		152155F4298E3321002972C1 /* iOSInterview.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSInterview.xcdatamodel; sourceTree = "<group>"; };
 		152155F6298E3322002972C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -125,7 +135,7 @@
 				15912521298E4A15009C33E6 /* view */,
 				152155EA298E3321002972C1 /* AppDelegate.swift */,
 				152155EC298E3321002972C1 /* SceneDelegate.swift */,
-				152155EE298E3321002972C1 /* ViewController.swift */,
+				152155EE298E3321002972C1 /* NotificationViewController.swift */,
 				151FC4AA29908D2100607D98 /* MainTableViewController.swift */,
 				152155F0298E3321002972C1 /* Main.storyboard */,
 				152155F6298E3322002972C1 /* Assets.xcassets */,
@@ -166,7 +176,9 @@
 				15215621298E3560002972C1 /* Url.swift */,
 				1521561F298E34C0002972C1 /* GetJson.swift */,
 				15912524298E5B28009C33E6 /* GetDataNotification.swift */,
-				151FC4B02990AA1E00607D98 /* GetDataAmount.swift */,
+				151FC4B02990AA1E00607D98 /* GetDataAccount.swift */,
+				151FC4B22990AD8200607D98 /* GetDataFavorite.swift */,
+				151FC4B42990AE3800607D98 /* GetDataADBanner.swift */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -174,6 +186,7 @@
 		15215623298E3D0A002972C1 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				151FC4BA2990F96C00607D98 /* CustomView.swift */,
 				151FC4AC29908D2D00607D98 /* CustomTextField.swift */,
 				151FC4AE29908D6900607D98 /* CustomLabel.swift */,
 				15215624298E3D3F002972C1 /* UIColor.swift */,
@@ -185,6 +198,8 @@
 			isa = PBXGroup;
 			children = (
 				15912522298E4A9B009C33E6 /* CustomTabBarController.swift */,
+				151FC4B62990AF1B00607D98 /* NotificationTableViewCell.swift */,
+				151FC4B72990AF1B00607D98 /* NotificationTableViewCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -293,6 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				151FC4B92990AF1B00607D98 /* NotificationTableViewCell.xib in Resources */,
 				152155FA298E3322002972C1 /* LaunchScreen.storyboard in Resources */,
 				152155F7298E3322002972C1 /* Assets.xcassets in Resources */,
 				152155F2298E3321002972C1 /* Main.storyboard in Resources */,
@@ -320,17 +336,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				152155EF298E3321002972C1 /* ViewController.swift in Sources */,
+				152155EF298E3321002972C1 /* NotificationViewController.swift in Sources */,
 				151FC4AD29908D2D00607D98 /* CustomTextField.swift in Sources */,
 				15215625298E3D3F002972C1 /* UIColor.swift in Sources */,
 				15912523298E4A9B009C33E6 /* CustomTabBarController.swift in Sources */,
+				151FC4B82990AF1B00607D98 /* NotificationTableViewCell.swift in Sources */,
 				15215622298E3560002972C1 /* Url.swift in Sources */,
 				152155F5298E3321002972C1 /* iOSInterview.xcdatamodeld in Sources */,
+				151FC4B32990AD8200607D98 /* GetDataFavorite.swift in Sources */,
 				15912525298E5B28009C33E6 /* GetDataNotification.swift in Sources */,
+				151FC4BB2990F96C00607D98 /* CustomView.swift in Sources */,
 				151FC4AF29908D6900607D98 /* CustomLabel.swift in Sources */,
 				152155EB298E3321002972C1 /* AppDelegate.swift in Sources */,
 				152155ED298E3321002972C1 /* SceneDelegate.swift in Sources */,
-				151FC4B12990AA1E00607D98 /* GetDataAmount.swift in Sources */,
+				151FC4B12990AA1E00607D98 /* GetDataAccount.swift in Sources */,
+				151FC4B52990AE3800607D98 /* GetDataADBanner.swift in Sources */,
 				151FC4AB29908D2100607D98 /* MainTableViewController.swift in Sources */,
 				15215620298E34C0002972C1 /* GetJson.swift in Sources */,
 			);

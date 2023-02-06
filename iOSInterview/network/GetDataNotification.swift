@@ -2,8 +2,9 @@
 
 import Foundation
 class GetDataNotification : Codable{
-    var msgCode: Int?
-    var data : NotificationResult?
+    var msgCode: String?
+    var msgContent : String?
+    var result : NotificationResult?
 }
 
 class NotificationResult : Codable{

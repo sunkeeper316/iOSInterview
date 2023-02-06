@@ -38,3 +38,4 @@ var Favorite_NotEmpty = "https://willywu0201.github.io/data/favoriteList.json"
 
 var AD_Banner = "https://willywu0201.github.io/data/banner.json"
 
+

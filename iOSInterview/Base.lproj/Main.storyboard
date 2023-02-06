@@ -9,25 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOSInterview" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="kdj-NI-aV5">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="bell.fill" catalog="system" id="YVi-Em-C30"/>
-                    </navigationItem>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="421" y="-1625"/>
-        </scene>
         <!--Item-->
         <scene sceneID="vLG-6j-gVe">
             <objects>
@@ -293,11 +274,12 @@
                         <barButtonItem key="leftBarButtonItem" image="avatar" id="L1F-MB-tS2"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="iconBell01Nomal" id="6vu-j9-cMW">
                             <connections>
-                                <segue destination="qkq-9Q-Yxb" kind="show" id="rA6-Qq-oWu"/>
+                                <action selector="clickNotification:" destination="IpD-ig-8VJ" id="2dS-wh-6Qa"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="itemNotification" destination="6vu-j9-cMW" id="Uz3-6R-NZr"/>
                         <outlet property="tfKHRamount" destination="1bN-6k-hnb" id="W3O-Rq-ixc"/>
                         <outlet property="tfUSDamount" destination="pLT-Pp-Fwq" id="3OM-8R-Lsh"/>
                     </connections>
@@ -306,17 +288,32 @@
             </objects>
             <point key="canvasLocation" x="1901.5267175572519" y="-924.64788732394368"/>
         </scene>
-        <!--View Controller-->
+        <!--Notification View Controller-->
         <scene sceneID="AFt-If-2P1">
             <objects>
-                <viewController id="qkq-9Q-Yxb" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotificationViewController" id="qkq-9Q-Yxb" customClass="NotificationViewController" customModule="iOSInterview" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b0o-dN-ZWh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="N0I-WD-wEy">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="OuZ-Id-XDF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="N0I-WD-wEy" firstAttribute="top" secondItem="OuZ-Id-XDF" secondAttribute="top" id="ECE-Wf-1oY"/>
+                            <constraint firstItem="OuZ-Id-XDF" firstAttribute="trailing" secondItem="N0I-WD-wEy" secondAttribute="trailing" id="Ljy-6l-Vkx"/>
+                            <constraint firstItem="OuZ-Id-XDF" firstAttribute="bottom" secondItem="N0I-WD-wEy" secondAttribute="bottom" id="PGp-eB-G84"/>
+                            <constraint firstItem="N0I-WD-wEy" firstAttribute="leading" secondItem="OuZ-Id-XDF" secondAttribute="leading" id="TOE-gW-nIb"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oh2-yb-0f6"/>
+                    <connections>
+                        <outlet property="tableview" destination="N0I-WD-wEy" id="Lsg-dG-sAH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6r3-O8-IGE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -398,7 +395,6 @@
     <color key="tintColor" red="1" green="0.53333333333333333" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
         <image name="avatar" width="42" height="42"/>
-        <image name="bell.fill" catalog="system" width="123" height="128"/>
         <image name="button00ElementMenuPayment" width="56" height="56"/>
         <image name="button00ElementMenuQRcode" width="56" height="56"/>
         <image name="button00ElementMenuTopUp" width="56" height="56"/>

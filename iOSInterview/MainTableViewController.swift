@@ -6,24 +6,75 @@ class MainTableViewController: UITableViewController {
     @IBOutlet weak var tfUSDamount: CustomTextField!
     @IBOutlet weak var tfKHRamount: CustomTextField!
     
+    @IBOutlet weak var itemNotification: UIBarButtonItem!
     
+    var messages: [NotificationMessage] = [NotificationMessage]()
+//    var refreshControl:UIRefreshControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tfUSDamount.delegate = self
         tfKHRamount.delegate = self
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        refreshControl = UIRefreshControl()
+        refreshControl?.attributedTitle = NSAttributedString(string: "refresh...")
+                
+        refreshControl?.addTarget(self, action: #selector(loadData), for: .valueChanged)
+        tableView.addSubview(refreshControl!)
+        
+        getNotificationMessageTask(Notification_Empty ){[unowned self] notifications,error in
+            if let error = error {
+              print("Error: \(error)")
+              return
+            }else{
+                if let notifications = notifications {
+                    messages = notifications
+                    print(messages.count)
+                }
+            }
+        }
+    }
+    
+    @objc func loadData(){
+        print("loadData")
+        
+        getNotificationMessageTask(Notification_NotEmpty ){[unowned self] notifications,error in
+            DispatchQueue.main.async {
+                self.refreshControl?.endRefreshing()
+            }
+            
+            if let error = error {
+              print("Error: \(error)")
+              return
+            }else{
+                if let notifications = notifications {
+                    messages = notifications
+                    DispatchQueue.main.async {
+                        itemNotification.image = UIImage(named: "iconBell02Active")
+                    }
+                    
+                    print(messages.count)
+                }
+            }
+        }
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     override func viewDidAppear(_ animated: Bool) {
         
     }
 
-
+    @IBAction func clickNotification(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let vc = storyboard.instantiateViewController(withIdentifier: "NotificationViewController") as? NotificationViewController {
+            vc.messages = self.messages
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
+    }
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
