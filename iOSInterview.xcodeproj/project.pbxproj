@@ -29,7 +29,6 @@
 		15215620298E34C0002972C1 /* GetJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521561F298E34C0002972C1 /* GetJson.swift */; };
 		15215622298E3560002972C1 /* Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15215621298E3560002972C1 /* Url.swift */; };
 		15215625298E3D3F002972C1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15215624298E3D3F002972C1 /* UIColor.swift */; };
-		15472135299277F900A3A368 /* CustomTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15472134299277F900A3A368 /* CustomTabbar.swift */; };
 		15912523298E4A9B009C33E6 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15912522298E4A9B009C33E6 /* CustomTabBarController.swift */; };
 		15912525298E5B28009C33E6 /* GetDataNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15912524298E5B28009C33E6 /* GetDataNotification.swift */; };
 		159F59962991E7C700E13AC9 /* ADBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159F59942991E7C700E13AC9 /* ADBannerCollectionViewCell.swift */; };
@@ -83,7 +82,6 @@
 		1521561F298E34C0002972C1 /* GetJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetJson.swift; sourceTree = "<group>"; };
 		15215621298E3560002972C1 /* Url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Url.swift; sourceTree = "<group>"; };
 		15215624298E3D3F002972C1 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		15472134299277F900A3A368 /* CustomTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbar.swift; sourceTree = "<group>"; };
 		15912522298E4A9B009C33E6 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		15912524298E5B28009C33E6 /* GetDataNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataNotification.swift; sourceTree = "<group>"; };
 		159F59942991E7C700E13AC9 /* ADBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBannerCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -203,7 +201,6 @@
 				151FC4AC29908D2D00607D98 /* CustomTextField.swift */,
 				151FC4AE29908D6900607D98 /* CustomLabel.swift */,
 				15215624298E3D3F002972C1 /* UIColor.swift */,
-				15472134299277F900A3A368 /* CustomTabbar.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -365,7 +362,6 @@
 				152155F5298E3321002972C1 /* iOSInterview.xcdatamodeld in Sources */,
 				151FC4B32990AD8200607D98 /* GetDataFavorite.swift in Sources */,
 				15912525298E5B28009C33E6 /* GetDataNotification.swift in Sources */,
-				15472135299277F900A3A368 /* CustomTabbar.swift in Sources */,
 				151FC4BB2990F96C00607D98 /* CustomView.swift in Sources */,
 				151FC4AF29908D6900607D98 /* CustomLabel.swift in Sources */,
 				152155EB298E3321002972C1 /* AppDelegate.swift in Sources */,
