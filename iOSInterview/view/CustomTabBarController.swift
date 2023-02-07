@@ -1,17 +1,8 @@
-//
-//  CustomTabBarController.swift
-//  iOSInterview
-//
-//  Created by Sun Huang on 2023/2/4.
-//
+
 
 import UIKit
 
 class CustomTabBarController: UITabBarController {
-
-//    var customButtons : [UIButton]!
-//    var selecteds = ["icTabbarHomeActive" ,"icTabbarAccountDefault", "icTabbarLocationActive" , "icTabbarLocationActive"]
-//    var unselecteds = ["icTabbarHomeActive" ,"icTabbarAccountDefault", "icTabbarLocationActive" , "icTabbarLocationActive"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,33 +13,56 @@ class CustomTabBarController: UITabBarController {
     }
     
     override func viewDidLayoutSubviews() {
+//        guard let tabBar = self.tabBar as? CustomTabBar else { return }
+            
+            
+        
         tabBar.frame.size.height = 50
+        tabBar.backgroundColor = .clear
         tabBar.frame.size.width = view.bounds.width - 48
         tabBar.frame.origin.x = 24
         tabBar.frame.origin.y = view.bounds.height - 100
-        tabBar.layer.cornerRadius = 20
-        tabBar.layer.shadowOffset = CGSize(width: 1, height: 0)
-        tabBar.layer.shadowRadius = 3
-        tabBar.layer.shadowColor = UIColor.black.cgColor
-        tabBar.layer.shadowOpacity = 0.5
+        tabBar.backgroundImage = UIImage()
+        tabBar.layer.cornerRadius = 25
+//        tabBar.clipsToBounds = true
         
+//        tabBar.clipsToBounds = false
+////        tabBar.roundCorners(corners: [.topLeft, .topRight ,.bottomLeft , .bottomRight], radius: 25)
+//        tabBar.addShadow(offset: CGSize(width: 0, height: 2), color: .black, radius: 4, opacity: 1)
+        
+//        let layer = CAShapeLayer()
+////            layer.path = UIBezierPath(roundedRect: CGRect(x: 30,
+////                                                          y: tabBar.bounds.minY + 5,
+////                                                          //y: tabBar.bounds.minY - 28,
+////                                                          width: tabBar.bounds.width - 60,
+////                                                          height: tabBar.bounds.height - 24),
+////                                      cornerRadius: (tabBar.frame.width / 2)).cgPath
+//            layer.shadowColor = UIColor.lightGray.cgColor
+//            layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
+//            layer.shadowRadius = 25.0
+//            layer.shadowOpacity = 0.3
+//            layer.borderWidth = 1.0
+//            layer.opacity = 1.0
+//            layer.masksToBounds = false
+//            layer.fillColor = UIColor.white.cgColor
+//
+//        tabBar.layer.insertSublayer(layer, at: 0)
+        
+//        let path = UIBezierPath(roundedRect: tabBar.bounds, byRoundingCorners: [.topLeft, .topRight ,.bottomLeft , .bottomRight], cornerRadii: CGSize(width: 25, height: 25))
+//        let mask = CAShapeLayer()
+//        mask.path = path.cgPath
+//        tabBar.layer.mask = mask
+//        tabBar.backgroundColor = UIColor.white
+//
+//        tabBar.clipsToBounds = false
+////        tabBar.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+//        tabBar.layer.shadowOffset = CGSize(width: 0, height: 2)
+//        tabBar.layer.shadowRadius = 5
+//        tabBar.layer.shadowColor = UIColor.black.cgColor
+//        tabBar.layer.shadowOpacity = 1
+//
         tabBar.tintColor = UIColor.orange01
-//        self.selectedIndex = 0
-//        customButtons = [setTabButton() , setTabButton() , setTabButton() , setTabButton()]
-//        for (index,bt) in customButtons.enumerated() {
-//            let width = (view.bounds.width - 48 ) / 4
-//            bt.tag = index
-//            bt.center = CGPoint(x: tabBar.bounds.midX - width * CGFloat((2 - index)) + width * 0.5, y: tabBar.bounds.midY )
-//            if index == self.selectedIndex {
-//
-//                bt.setImage(UIImage(named: selecteds[index]), for: .normal)
-//            }else{
-//                bt.setImage(UIImage(named: unselecteds[index]), for: .normal)
-//
-//            }
-//            tabBar.addSubview(bt)
-//        }
-//        tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        
     }
     
 
@@ -58,34 +72,5 @@ class CustomTabBarController: UITabBarController {
         print(item.title)
         
     }
-//    func setTabButton() -> UIButton{
-//        //button_ Personal_selected  button_ measuring_selected  button_ memo_selected
-//        let button = UIButton()
-//
-//
-//        button.imageView?.contentMode = .scaleAspectFit
-//        button.imageEdgeInsets = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
-//        button.frame.size = CGSize(width: tabBar.bounds.width / 4, height: tabBar.bounds.height)
-//
-//
-//        button.clipsToBounds = true
-//        button.addTarget(self, action: #selector(showViewController), for: .touchDown)
-//
-//        return button
-//    }
-//    @objc func showViewController(_ sender:UIButton) {
-//
-//    }
-//    func setButtonColor(tag:Int){
-//        self.selectedIndex = tag
-//        for (index , bt) in customButtons.enumerated() {
-//            if index == tag {
-//                bt.setImage(UIImage(named: selecteds[index]), for: .normal)
-//
-//            }else{
-//
-//                bt.setImage(UIImage(named: unselecteds[index]), for: .normal)
-//            }
-//        }
-//    }
+
 }

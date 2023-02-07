@@ -12,7 +12,6 @@ func getNotificationMessageTask(_ urlstr: String, completionHandler: @escaping (
       }
       
         if let data = data {
-            print("data")
             do {
               let decoder = JSONDecoder()
                 if let result = try? decoder.decode(GetDataNotification.self, from: data) {
@@ -39,7 +38,55 @@ func getNotificationMessageTask(_ urlstr: String, completionHandler: @escaping (
     }
     task.resume()
 }
-
+func getAccountTask(_ urlstr: String, completionHandler: @escaping (Account?, Error?) -> Void) {
+    let url = URL(string: urlstr)!
+    let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+      if let error = error {
+        print("Error: \(error)")
+          completionHandler(nil , error)
+        return
+      }
+      
+        if let data = data {
+            do {
+              let decoder = JSONDecoder()
+                if let result = try? decoder.decode(GetDataAccount.self, from: data) {
+                    if let digitalList = result.result?.digitalList {
+                        if digitalList.count > 0 {
+                            completionHandler(digitalList.first , nil)
+                            return
+                        }
+                    }else if let savingsList = result.result?.savingsList {
+                        if savingsList.count > 0 {
+                            completionHandler(savingsList.first , nil)
+                            return
+                        }
+                    }else if let fixedDepositList = result.result?.fixedDepositList {
+                        if fixedDepositList.count > 0 {
+                            completionHandler(fixedDepositList.first , nil)
+                            return
+                        }
+                    }
+                }else{
+                    completionHandler(nil , nil)
+                    return
+                }
+              
+            } catch let error as NSError {
+              print("Error: \(error)")
+                completionHandler(nil , error)
+                return
+            }
+        }else{
+            print("No data received")
+            completionHandler(nil , nil)
+            return
+        }
+      
+        completionHandler(nil , nil)
+    }
+    task.resume()
+}
 func getFavoriteTask(_ urlstr: String, completionHandler: @escaping ([Favorite]?, Error?) -> Void) {
     let url = URL(string: urlstr)!
     let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -50,7 +97,6 @@ func getFavoriteTask(_ urlstr: String, completionHandler: @escaping ([Favorite]?
       }
       
         if let data = data {
-            print("data")
             do {
               let decoder = JSONDecoder()
                 if let result = try? decoder.decode(GetDataFavorite.self, from: data) {
@@ -88,7 +134,6 @@ func getADBannerTask(_ urlstr: String, completionHandler: @escaping ([ADBanner]?
       }
       
         if let data = data {
-            print("data")
             do {
               let decoder = JSONDecoder()
                 if let result = try? decoder.decode(GetDataADBanner.self, from: data) {

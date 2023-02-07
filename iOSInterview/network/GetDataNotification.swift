@@ -18,3 +18,4 @@ class NotificationMessage : Codable{
     var message: String?
 }
 
+

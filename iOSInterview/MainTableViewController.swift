@@ -6,6 +6,10 @@ class MainTableViewController: UITableViewController {
     @IBOutlet weak var tfUSDamount: CustomTextField!
     @IBOutlet weak var tfKHRamount: CustomTextField!
     
+    @IBOutlet weak var noFavoriteImage: UIImageView!
+    @IBOutlet weak var noFavoriteLabel: UILabel!
+    @IBOutlet weak var noFavoriteLabel2: UILabel!
+    
     @IBOutlet weak var itemNotification: UIBarButtonItem!
     
     @IBOutlet weak var favoriteCollectionview: UICollectionView!
@@ -19,6 +23,14 @@ class MainTableViewController: UITableViewController {
     
     var timer: Timer?
     var scrollright = true
+    
+    var usd_Saving = 0.0
+    var usd_Fixed = 0.0
+    var usd_Digital = 0.0
+    
+    var khr_Saving = 0.0
+    var khr_Fixed = 0.0
+    var khr_Digital = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +77,102 @@ class MainTableViewController: UITableViewController {
                 }
             }
         }
+        getAccountTask(USD_Saving) { [unowned self] account, error in
+            if let error = error {
+              print("Error: \(error)")
+              return
+            }else{
+                if let account = account {
+                    usd_Saving = account.balance ?? 0.0
+                    checkShowUSD()
+                }
+            }
+        }
+        getAccountTask(USD_Fixed) { [unowned self] account, error in
+            if let error = error {
+              print("Error: \(error)")
+              return
+            }else{
+                if let account = account {
+                    usd_Fixed = account.balance ?? 0.0
+                    checkShowUSD()
+                }
+            }
+        }
+        getAccountTask(USD_Digital) { [unowned self] account, error in
+            if let error = error {
+              print("Error: \(error)")
+              return
+            }else{
+                if let account = account {
+                    usd_Digital = account.balance ?? 0.0
+                    checkShowUSD()
+                }
+            }
+        }
+        
+        //=====KHR
+        getAccountTask(KHR_Saving) { [unowned self] account, error in
+            if let error = error {
+              print("Error: \(error)")
+              return
+            }else{
+                if let account = account {
+                    khr_Saving = account.balance ?? 0.0
+                    checkShowKHR()
+                }
+            }
+        }
+        getAccountTask(KHR_Fixed) { [unowned self] account, error in
+            if let error = error {
+              print("Error: \(error)")
+              return
+            }else{
+                if let account = account {
+                    khr_Fixed = account.balance ?? 0.0
+                    checkShowKHR()
+                }
+            }
+        }
+        getAccountTask(KHR_Digital) { [unowned self] account, error in
+            if let error = error {
+              print("Error: \(error)")
+              return
+            }else{
+                if let account = account {
+                    khr_Digital = account.balance ?? 0.0
+                    checkShowKHR()
+                }
+            }
+        }
+    }
+    func checkShowUSD(){
+        if usd_Saving != 0.0 &&  usd_Fixed != 0.0 &&  usd_Digital != 0.0 {
+            DispatchQueue.main.async { [unowned self] in
+                tfUSDamount.text = "\(usd_Saving),\(usd_Fixed),\(usd_Digital)"
+            }
+        }
+    }
+    
+    func checkShowKHR(){
+        if khr_Saving != 0.0 &&  khr_Fixed != 0.0 &&  khr_Digital != 0.0 {
+            DispatchQueue.main.async { [unowned self] in
+                tfKHRamount.text = "\(khr_Saving),\(khr_Fixed),\(khr_Digital)"
+            }
+        }
+    }
+    func resetAccount(){
+        usd_Saving = 0.0
+        usd_Fixed = 0.0
+        usd_Digital = 0.0
+        khr_Saving = 0.0
+        khr_Fixed = 0.0
+        khr_Digital = 0.0
+    }
+    
+    @IBAction func clickEye(_ sender: UIButton) {
+        tfUSDamount.isSecureTextEntry = !tfUSDamount.isSecureTextEntry
+        tfKHRamount.isSecureTextEntry = !tfKHRamount.isSecureTextEntry
     }
     @objc func timerRunBanner(){
         if (pageControl.currentPage + 1) > (banners.count - 1) {
@@ -84,13 +192,10 @@ class MainTableViewController: UITableViewController {
     }
     
     @objc func loadData(){
-//        print("loadData")
-        
         getNotificationMessageTask(Notification_NotEmpty ){[unowned self] notifications,error in
             DispatchQueue.main.async {
                 self.refreshControl?.endRefreshing()
             }
-            
             if let error = error {
               print("Error: \(error)")
               return
@@ -100,14 +205,109 @@ class MainTableViewController: UITableViewController {
                     DispatchQueue.main.async {
                         itemNotification.image = UIImage(named: "iconBell02Active")
                     }
-                    
-                    print(messages.count)
+                }
+            }
+        }
+        
+        getFavoriteTask(Favorite_NotEmpty) { [unowned self] _favorites,error in
+            DispatchQueue.main.async {
+                self.refreshControl?.endRefreshing()
+            }
+            if let error = error {
+              print("Error: \(error)")
+              return
+            }else{
+                if let _favorites = _favorites {
+                    favorites = _favorites
+                    DispatchQueue.main.async { [unowned self] in
+                        noFavoriteImage.isHidden = true
+                        noFavoriteLabel.isHidden = true
+                        noFavoriteLabel2.isHidden = true
+                        favoriteCollectionview.reloadData()
+                    }
+                }
+            }
+        }
+        
+        //======== get Account
+        resetAccount()
+        getAccountTask(USD_Saving_Pull) { [unowned self] account, error in
+            if let error = error {
+              print("Error: \(error)")
+              return
+            }else{
+                if let account = account {
+                    usd_Saving = account.balance ?? 0.0
+                    checkShowUSD()
+                }
+            }
+        }
+        getAccountTask(USD_Fixed_Pull) { [unowned self] account, error in
+            if let error = error {
+              print("Error: \(error)")
+              return
+            }else{
+                if let account = account {
+                    usd_Fixed = account.balance ?? 0.0
+                    checkShowUSD()
+                }
+            }
+        }
+        getAccountTask(USD_Digital_Pull) { [unowned self] account, error in
+            if let error = error {
+              print("Error: \(error)")
+              return
+            }else{
+                if let account = account {
+                    usd_Digital = account.balance ?? 0.0
+                    checkShowUSD()
+                }
+            }
+        }
+        
+        //=====KHR
+        getAccountTask(KHR_Saving_Pull) { [unowned self] account, error in
+            if let error = error {
+              print("Error: \(error)")
+              return
+            }else{
+                if let account = account {
+                    khr_Saving = account.balance ?? 0.0
+                    checkShowKHR()
+                }
+            }
+        }
+        getAccountTask(KHR_Fixed_Pull) { [unowned self] account, error in
+            if let error = error {
+              print("Error: \(error)")
+              return
+            }else{
+                if let account = account {
+                    khr_Fixed = account.balance ?? 0.0
+                    checkShowKHR()
+                }
+            }
+        }
+        getAccountTask(KHR_Digital_Pull) { [unowned self] account, error in
+            if let error = error {
+              print("Error: \(error)")
+              return
+            }else{
+                if let account = account {
+                    khr_Digital = account.balance ?? 0.0
+                    checkShowKHR()
                 }
             }
         }
     }
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
+        if banners.count != 0 {
+            if timer == nil {
+                timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(timerRunBanner), userInfo: nil, repeats: true)
+            }
+        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -158,6 +358,9 @@ extension MainTableViewController : UICollectionViewDelegate , UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == favoriteCollectionview {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoriteCollectionViewCell", for: indexPath) as! FavoriteCollectionViewCell
+            let favorite = favorites[indexPath.row]
+            cell.lbFavorite.text = favorite.nickname
+            cell.imageFavorite.image = getTransTypeImage(transType: favorite.transType ?? "")
             return cell
         }else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ADBannerCollectionViewCell", for: indexPath) as! ADBannerCollectionViewCell
