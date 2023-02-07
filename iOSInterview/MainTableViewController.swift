@@ -301,7 +301,9 @@ class MainTableViewController: UITableViewController {
         }
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.tabBarController?.tabBar.isHidden = false
+        guard let tabBarController = self.tabBarController as? CustomTabBarController else {return}
+        tabBarController.tabBar.isHidden = false
+        tabBarController.barview.isHidden = false
         if banners.count != 0 {
             if timer == nil {
                 timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(timerRunBanner), userInfo: nil, repeats: true)

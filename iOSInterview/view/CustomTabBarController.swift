@@ -12,7 +12,6 @@ class CustomTabBarController: UITabBarController {
     }
     
     override func viewDidLayoutSubviews() {
-
         tabBar.frame.size.height = 50
         tabBar.backgroundColor = .clear
         tabBar.frame.size.width = view.bounds.width - 48

@@ -14,7 +14,10 @@ class NotificationViewController: UIViewController {
         tableview.delegate = self
         tableview.dataSource = self
         
-        self.tabBarController?.tabBar.isHidden = true
+        guard let tabBarController = self.tabBarController as? CustomTabBarController else {return}
+        tabBarController.tabBar.isHidden = true
+        tabBarController.barview.isHidden = true
+        
         print("messages \(messages)")
     }
     
