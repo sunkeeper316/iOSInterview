@@ -31,6 +31,11 @@
 		15215625298E3D3F002972C1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15215624298E3D3F002972C1 /* UIColor.swift */; };
 		15912523298E4A9B009C33E6 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15912522298E4A9B009C33E6 /* CustomTabBarController.swift */; };
 		15912525298E5B28009C33E6 /* GetDataNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15912524298E5B28009C33E6 /* GetDataNotification.swift */; };
+		159F59962991E7C700E13AC9 /* ADBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159F59942991E7C700E13AC9 /* ADBannerCollectionViewCell.swift */; };
+		159F59972991E7C700E13AC9 /* ADBannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 159F59952991E7C700E13AC9 /* ADBannerCollectionViewCell.xib */; };
+		159F599A2991E88D00E13AC9 /* FavoriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159F59982991E88D00E13AC9 /* FavoriteCollectionViewCell.swift */; };
+		159F599B2991E88D00E13AC9 /* FavoriteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 159F59992991E88D00E13AC9 /* FavoriteCollectionViewCell.xib */; };
+		159F599D2991F2A500E13AC9 /* GetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159F599C2991F2A500E13AC9 /* GetImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +84,11 @@
 		15215624298E3D3F002972C1 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		15912522298E4A9B009C33E6 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		15912524298E5B28009C33E6 /* GetDataNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataNotification.swift; sourceTree = "<group>"; };
+		159F59942991E7C700E13AC9 /* ADBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		159F59952991E7C700E13AC9 /* ADBannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ADBannerCollectionViewCell.xib; sourceTree = "<group>"; };
+		159F59982991E88D00E13AC9 /* FavoriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionViewCell.swift; sourceTree = "<group>"; };
+		159F59992991E88D00E13AC9 /* FavoriteCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteCollectionViewCell.xib; sourceTree = "<group>"; };
+		159F599C2991F2A500E13AC9 /* GetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +189,7 @@
 				151FC4B02990AA1E00607D98 /* GetDataAccount.swift */,
 				151FC4B22990AD8200607D98 /* GetDataFavorite.swift */,
 				151FC4B42990AE3800607D98 /* GetDataADBanner.swift */,
+				159F599C2991F2A500E13AC9 /* GetImage.swift */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -200,6 +211,10 @@
 				15912522298E4A9B009C33E6 /* CustomTabBarController.swift */,
 				151FC4B62990AF1B00607D98 /* NotificationTableViewCell.swift */,
 				151FC4B72990AF1B00607D98 /* NotificationTableViewCell.xib */,
+				159F59942991E7C700E13AC9 /* ADBannerCollectionViewCell.swift */,
+				159F59952991E7C700E13AC9 /* ADBannerCollectionViewCell.xib */,
+				159F59982991E88D00E13AC9 /* FavoriteCollectionViewCell.swift */,
+				159F59992991E88D00E13AC9 /* FavoriteCollectionViewCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -312,6 +327,8 @@
 				152155FA298E3322002972C1 /* LaunchScreen.storyboard in Resources */,
 				152155F7298E3322002972C1 /* Assets.xcassets in Resources */,
 				152155F2298E3321002972C1 /* Main.storyboard in Resources */,
+				159F599B2991E88D00E13AC9 /* FavoriteCollectionViewCell.xib in Resources */,
+				159F59972991E7C700E13AC9 /* ADBannerCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,9 +367,12 @@
 				152155EB298E3321002972C1 /* AppDelegate.swift in Sources */,
 				152155ED298E3321002972C1 /* SceneDelegate.swift in Sources */,
 				151FC4B12990AA1E00607D98 /* GetDataAccount.swift in Sources */,
+				159F59962991E7C700E13AC9 /* ADBannerCollectionViewCell.swift in Sources */,
 				151FC4B52990AE3800607D98 /* GetDataADBanner.swift in Sources */,
+				159F599D2991F2A500E13AC9 /* GetImage.swift in Sources */,
 				151FC4AB29908D2100607D98 /* MainTableViewController.swift in Sources */,
 				15215620298E34C0002972C1 /* GetJson.swift in Sources */,
+				159F599A2991E88D00E13AC9 /* FavoriteCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
