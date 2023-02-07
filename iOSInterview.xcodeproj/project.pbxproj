@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		151FC4AB29908D2100607D98 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151FC4AA29908D2100607D98 /* MainTableViewController.swift */; };
 		151FC4AD29908D2D00607D98 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151FC4AC29908D2D00607D98 /* CustomTextField.swift */; };
-		151FC4AF29908D6900607D98 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151FC4AE29908D6900607D98 /* CustomLabel.swift */; };
 		151FC4B12990AA1E00607D98 /* GetDataAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151FC4B02990AA1E00607D98 /* GetDataAccount.swift */; };
 		151FC4B32990AD8200607D98 /* GetDataFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151FC4B22990AD8200607D98 /* GetDataFavorite.swift */; };
 		151FC4B52990AE3800607D98 /* GetDataADBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151FC4B42990AE3800607D98 /* GetDataADBanner.swift */; };
@@ -58,7 +57,6 @@
 /* Begin PBXFileReference section */
 		151FC4AA29908D2100607D98 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		151FC4AC29908D2D00607D98 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		151FC4AE29908D6900607D98 /* CustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		151FC4B02990AA1E00607D98 /* GetDataAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataAccount.swift; sourceTree = "<group>"; };
 		151FC4B22990AD8200607D98 /* GetDataFavorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataFavorite.swift; sourceTree = "<group>"; };
 		151FC4B42990AE3800607D98 /* GetDataADBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataADBanner.swift; sourceTree = "<group>"; };
@@ -199,7 +197,6 @@
 			children = (
 				151FC4BA2990F96C00607D98 /* CustomView.swift */,
 				151FC4AC29908D2D00607D98 /* CustomTextField.swift */,
-				151FC4AE29908D6900607D98 /* CustomLabel.swift */,
 				15215624298E3D3F002972C1 /* UIColor.swift */,
 			);
 			path = common;
@@ -363,7 +360,6 @@
 				151FC4B32990AD8200607D98 /* GetDataFavorite.swift in Sources */,
 				15912525298E5B28009C33E6 /* GetDataNotification.swift in Sources */,
 				151FC4BB2990F96C00607D98 /* CustomView.swift in Sources */,
-				151FC4AF29908D6900607D98 /* CustomLabel.swift in Sources */,
 				152155EB298E3321002972C1 /* AppDelegate.swift in Sources */,
 				152155ED298E3321002972C1 /* SceneDelegate.swift in Sources */,
 				151FC4B12990AA1E00607D98 /* GetDataAccount.swift in Sources */,
